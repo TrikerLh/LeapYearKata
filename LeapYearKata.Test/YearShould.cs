@@ -29,5 +29,14 @@ namespace LeapYearKata.Test
             var result = Year.IsLeap(200);
             Assert.That(result, Is.EqualTo(false));
         }
+
+        [TestCase(100)]
+        [TestCase(200)]
+        [TestCase(300)]
+        public void Return_false_with_year_divisible_100_but_not_divisible_400(int input)
+        {
+            var result = Year.IsLeap(input);
+            Assert.AreEqual(false, result);
+        }
     }
 }
