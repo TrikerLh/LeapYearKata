@@ -7,17 +7,12 @@ namespace LeapYearKata.Test
         {
         }
 
-        [Test]
-        public void Return_true_with_year_400()
+        [TestCase(400)]
+        [TestCase(800)]
+        [TestCase(1200)]
+        public void Return_true_with_year_divisible_400(int input)
         {
-            var result = Year.IsLeap(400);
-            Assert.That(result, Is.EqualTo(true));
-        }
-
-        [Test]
-        public void Return_true_with_year_800()
-        {
-            var result = Year.IsLeap(800);
+            var result = Year.IsLeap(input);
             Assert.That(result, Is.EqualTo(true));
         }
     }
