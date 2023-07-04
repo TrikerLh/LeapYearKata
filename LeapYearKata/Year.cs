@@ -5,7 +5,7 @@ public class Year
     public static bool IsLeap(int year)
     {
         if (year % 400 == 0) return true;
-        if (year == 100) return false;    
+        if (year == 100 || year == 200) return false;    
         return false;
     }
 }
