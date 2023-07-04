@@ -15,5 +15,12 @@ namespace LeapYearKata.Test
             var result = Year.IsLeap(input);
             Assert.That(result, Is.EqualTo(true));
         }
+
+        [Test]
+        public void Return_false_year_100()
+        {
+            var result = Year.IsLeap(200);
+            Assert.That(result, Is.EqualTo(false));
+        }
     }
 }
